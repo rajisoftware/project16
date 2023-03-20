@@ -1,0 +1,70 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>doors</title>
+    <style>
+        body{
+            position:relative;
+            left:35%;
+            top:100px;
+        }
+        #main{
+            width:300px;
+            height:300px;
+            display:flex;
+            overflow:hidden;
+        }
+        img{
+            width:inherit;
+            height:inherit;
+        }
+        #main:hover>img{
+            transition:all 5s linear;
+            transform:scale(1.2,1.2);
+        }
+        #door1{
+            background-color:red;
+            width:12%;
+            height:inherit;
+            transform-origin:left;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #main:hover #door1{
+            transition:all 5s linear;
+            transform:perspective(400px)rotatey(90deg);
+        }
+        #door2{
+            background-color: red;
+            width:12%;
+            height:inherit;
+            transform-origin:right;
+            position:absolute;
+            top:0;
+            left:120px;
+        }
+        #main:hover #door2{
+            transition:all 5s linear;
+            transform:perspective(400px)rotatey(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img src="https://c.ndtvimg.com/2019-01/9lfh1mu8_republic-day-wishes_625x300_26_January_19.jpg"alt="">
+        <div id="door1"></div>
+        <div id="door2"></div>
+    </div>
+    <h1>
+        <a href="{% url 'signpage' %}">navigate to sign page</a>
+    </h1>
+    <h1>
+        <a href="{% url 'universal' %}">navigate to universal page</a>
+    </h1>
+    <h1>
+        <a href="{% url 'rotate' %}">navigate to rotate page</a>
+    </h1>
+</body>
+</html>

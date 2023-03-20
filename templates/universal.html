@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>universal selector</title>
+    <link rel="stylesheet" href="css/c4.css">
+    <style>
+        *{
+            background-color:yellow;
+            color:ghostwhite;
+            border:2px double red;
+            text-shadow: 0 0 15px blueviolet;
+            font-style:italic;
+            padding:10px;
+            border-radius:50%;
+            box-shadow: 0 0 15px white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            <marquee behavior="alternate"
+            direction="">ok google----!
+            </marquee>
+        </h1>
+        <h1>
+            <marquee behavior="alternate"
+            direction="">hey siri---
+            </marquee>
+        </h1>
+        <h1>
+            <marquee behavior="alternate" direction="right">alexa---!!</marquee>
+        </h1>
+    </div>
+    <h1 align="center" >
+        <a href="{% url 'doors' %}">navigate to doors page</a>
+    </h1>
+    <h1 align="center">
+        <a href="{% url 'signpage' %}">navigate to sign page</a>
+    </h1>
+    <h1 align="center">
+        <a href="{% url 'rotate' %}">navigate to rotate page</a>
+    </h1>
+    
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>animations</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            border:5px solid black;
+            margin-top:5px;
+        }
+        #translate{
+            background:linear-gradient(45deg,lightblue,lightgreen);
+            border-style:groove;
+            border-color:coral;
+            animation-name:anime1;
+            animation-duration:5s;
+            animation-delay:3s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            animation-direction: alternate;
+        }
+        @keyframes anime1{
+            from{
+                transform:translatex(0);
+                filter:hue-rotate(0deg);
+                border-radius:0px;
+            }
+            to{
+                transform:translatex(500px);
+                filter:hue-rotate(360deg);
+                border-radius:75px;
+            }
+        }
+        #rotate{
+            position:relative;
+            left:50%;
+            background:linear-gradient(45deg,purple,yellow);
+            border-style:groove;
+            border-color:blue;
+            animation-name: anime2;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes anime2{
+            from{
+                transform:rotate(0deg)translatex(0);
+                filter:hue-rotate(0deg);
+                border-radius:0px;
+            }
+            to{
+                transform:rotate(360deg)translatex(500px);
+                filter:hue-rotate(360deg);
+                border-radius:75px;
+            }
+        }
+        #skew{
+            position:relative;
+            left:30%;
+            background:linear-gradient(45deg,red,silver);
+            border-style:groove;
+            border-color:orangered;
+            animation-name: anime3;
+            animation-duration:5s;
+            animation-delay:3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes anime3{
+            from{
+                transform:skew(0);
+                filter:hue-rotate(0deg);
+                border-radius:0px;
+            }
+            to{
+                transform:skew(360deg);
+                filter:hue-rotate(360deg);
+                border-radius:75px;
+            }
+        }
+    </style>
+</head>
+<body>
+      <div id="translate"></div>
+      <div id="rotate"></div>
+      <div id="skew"></div>
+    
+</body>
+</html>
+    <h1 align="center">
+        <a href="{% url 'doors' %}">navigate to doors page</a>
+    </h1>
+    <h1 align="center">
+        <a href="{% url 'signpage' %}">navigate to signpage page</a>
+    </h1>
+    <h1 align="center">
+        <a href="{% url 'universal' %}">navigate to universal page</a>
+    </h1>
+    
+</body>
+</html>

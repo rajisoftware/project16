@@ -1,0 +1,25 @@
+
+body{
+    margin:200px 0 0 600px;
+    background-image:url("https://images.unsplash.com/photo-1541675154750-0444c7d51e8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJhbmdhbG9yZXxlbnwwfHwwfHw%3D&w=1000&q=80");
+}
+fieldset{
+    background:linear-gradient(45deg,navy,brown);
+    text-align:center;
+    width:fit-content;
+    font-weight:1900;
+    font-style:italic;
+}
+legend{
+    text-align:left;
+}
+a{
+    color:blue;
+    background-color: blueviolet;
+    width:fit-content;
+}
+h1{
+    color:blue;
+    background-color: blueviolet;
+    width:fit-content;
+}

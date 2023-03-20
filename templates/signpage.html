@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+    <style>
+        body{
+            text-align:center;
+            margin:100px 0 0 400px;
+            background-image:url("https://webneel.com/wallpaper/sites/default/files/images/08-2018/2-nature-wallpaper-grass.jpg");
+            background-size: cover;
+           
+        }
+        fieldset{
+            text-align: center;
+            width:fit-content;
+            border-radius:30px;
+            background:linear-gradient(45deg,yellow,pink);
+            font-style:italic;
+            color:blue;
+        }
+        legend{
+            font-weight:bolder;
+        }
+        input{
+            margin:5px;
+            padding:5px;
+            border-radius:30px;
+            text-align:center;
+            border-color:darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is singpage</h1>
+    <form class="animate__animated animate__flip">
+        <fieldset>
+            <legend>sign-up</legend>
+            <input type="text"placeholder="firstname"><br>
+            <input type="text"placeholder="lastname"><br>
+            <input type="number"placeholder="+910000000"><br>
+            <input type="mail"placeholder="abc@gmail.com"><br>
+            <input type="datetime"placeholder="dob dd/mm/yyyy"><br>
+            <input type="radio"name="gender">male
+            <input type="radio"name="gender">female
+            <input type="radio"name="gender">others<br>
+            <input type="password"placeholder="strong password"><br>
+            <input type="password"placeholder="conform password"><br>
+        <label>country</label>
+        <select>
+            <option value=" ">---select----</option>
+            <option value=" ">india</option>
+            <option value=" ">pakistan</option>
+            <option value=" ">bangladesh</option>
+            <option value=" ">srilanka</option>
+        </select><br>
+        <input type="submit" value="submit">
+        </fieldset> 
+        <h1>
+            <a href="{% url 'doors' %}">navigate to doors page</a>
+        </h1>
+        <h1>
+            <a href="{% url 'universal' %}">navigate to universal page</a>
+        </h1>
+        <h1>
+            <a href="{% url 'rotate' %}">navigate to rotate page</a>
+        </h1>
+    
+</body>
+</html>
